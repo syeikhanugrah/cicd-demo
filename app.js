@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 // GET /greeting — Greeting
 app.get("/greeting", (req, res) => {
   res.status(200).json({
-    message: "hello",
+    message: "holla",
   });
 });
 
