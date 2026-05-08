@@ -36,6 +36,20 @@ describe("GET /", () => {
   });
 });
 
+// ── GET /greeting ──────────────────────────────────────────────────────────────
+describe("GET /greeting", () => {
+  test("should return status 200", async () => {
+    const res = await fetch(`${baseUrl}/greeting`);
+    expect(res.status).toBe(200);
+  });
+
+  test("should return hello message", async () => {
+    const res = await fetch(`${baseUrl}/greeting`);
+    const body = await res.json();
+    expect(body.message).toBe("hello di");
+  });
+});
+
 // ── GET /about ─────────────────────────────────────────────────────────
 describe("GET /about", () => {
   test("should return status 200", async () => {
