@@ -16,7 +16,6 @@ afterAll((done) => {
   server.close(done);
 });
 
-// ── GET / ──────────────────────────────────────────────────────────────
 describe("GET /", () => {
   test("should return status 200", async () => {
     const res = await fetch(`${baseUrl}/`);
@@ -36,7 +35,6 @@ describe("GET /", () => {
   });
 });
 
-// ── GET /greeting ──────────────────────────────────────────────────────────────
 describe("GET /greeting", () => {
   test("should return status 200", async () => {
     const res = await fetch(`${baseUrl}/greeting`);
@@ -50,7 +48,6 @@ describe("GET /greeting", () => {
   });
 });
 
-// ── GET /about ─────────────────────────────────────────────────────────
 describe("GET /about", () => {
   test("should return status 200", async () => {
     const res = await fetch(`${baseUrl}/about`);
@@ -65,7 +62,6 @@ describe("GET /about", () => {
   });
 });
 
-// ── POST /calculate ────────────────────────────────────────────────────
 describe("POST /calculate", () => {
   const post = (data) =>
     fetch(`${baseUrl}/calculate`, {
