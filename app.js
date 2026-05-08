@@ -12,6 +12,13 @@ app.get("/", (req, res) => {
   });
 });
 
+// GET /greeting
+app.get("/greeting", (req, res) => {
+  res.status(200).json({
+    message: "hello",
+  });
+});
+
 // GET /about — About endpoint
 app.get("/about", (req, res) => {
   res.status(200).json({
